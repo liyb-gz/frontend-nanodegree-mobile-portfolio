@@ -422,11 +422,12 @@ var resizePizzas = function(size) {
   changeSliderLabel(size);
 
   // Iterates through pizza elements on the page and changes their widths
-  // Refactored: deleted the deteminedDx function: after all it only need to run once!
+  // Refactored: deleted the detemineDx function: after all it only need to run once!
   function changePizzaSizes(size) {
     var pizzas = document.querySelectorAll(".randomPizzaContainer");
     var windowWidth = document.querySelector("#randomPizzas").offsetWidth;
 
+    // Copied from the old detemineDx function, but here it runs only once!
     function sizeSwitcher (size) {
       switch(size) {
         case "1":
