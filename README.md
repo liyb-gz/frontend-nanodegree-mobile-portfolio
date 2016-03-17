@@ -17,10 +17,10 @@ The below optiomizations have been done to the index.html:
 
 The below optiomizations have been done to the pizza.html:
 
-- on `main.js`
+- in `main.js`
 	- caching `document.body.scrollTop` so that it is requested only once
 	- refactoring the way the new width of the pizzas is calculated.
-- on `style.css`
+- in `style.css`
 	- adding `will-change: transform` and `transform: translateZ(0)` to `.mover` so that the moving pizzas in the background are on their own layers 
 
 ### No build tools are used in this project.

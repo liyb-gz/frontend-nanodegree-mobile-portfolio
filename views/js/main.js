@@ -406,13 +406,13 @@ var resizePizzas = function(size) {
   function changeSliderLabel(size) {
     switch(size) {
       case "1":
-        document.querySelector("#pizzaSize").innerHTML = "Small";
+        document.getElementById("pizzaSize").innerHTML = "Small";
         return;
       case "2":
-        document.querySelector("#pizzaSize").innerHTML = "Medium";
+        document.getElementById("pizzaSize").innerHTML = "Medium";
         return;
       case "3":
-        document.querySelector("#pizzaSize").innerHTML = "Large";
+        document.getElementById("pizzaSize").innerHTML = "Large";
         return;
       default:
         console.log("bug in changeSliderLabel");
@@ -424,8 +424,8 @@ var resizePizzas = function(size) {
   // Iterates through pizza elements on the page and changes their widths
   // Refactored: deleted the detemineDx function: after all it only need to run once!
   function changePizzaSizes(size) {
-    var pizzas = document.querySelectorAll(".randomPizzaContainer");
-    var windowWidth = document.querySelector("#randomPizzas").offsetWidth;
+    var pizzas = document.getElementsByClassName("randomPizzaContainer");
+    var windowWidth = document.getElementById("randomPizzas").offsetWidth;
 
     // Copied from the old detemineDx function, but here it runs only once!
     function sizeSwitcher (size) {
@@ -494,7 +494,7 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
-  var items = document.querySelectorAll('.mover');
+  var items = document.getElementsByClassName("mover");
   var cachedScrollTop = document.body.scrollTop;
   for (var i = 0; i < items.length; i++) {
     var phase = Math.sin((cachedScrollTop / 1250) + (i % 5));
@@ -526,7 +526,7 @@ document.addEventListener('DOMContentLoaded', function() {
     elem.style.width = "73.333px";
     elem.basicLeft = (i % cols) * s;
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
-    document.querySelector("#movingPizzas1").appendChild(elem);
+    document.getElementById("movingPizzas1").appendChild(elem);
   }
   updatePositions();
 });
