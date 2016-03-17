@@ -425,26 +425,24 @@ var resizePizzas = function(size) {
   // Refactored: deleted the detemineDx function: after all it only need to run once!
   function changePizzaSizes(size) {
     var pizzas = document.getElementsByClassName("randomPizzaContainer");
-    var windowWidth = document.getElementById("randomPizzas").offsetWidth;
+    var newWidth = 0;
 
-    // Copied from the old detemineDx function, but here it runs only once!
-    function sizeSwitcher (size) {
-      switch(size) {
-        case "1":
-          return 0.25;
-        case "2":
-          return 0.3333;
-        case "3":
-          return 0.5;
-        default:
-          console.log("bug in sizeSwitcher");
-      }
+    switch(size) {
+      case "1":
+        newWidth = 25;
+        break;
+      case "2":
+        newWidth = 33.3;
+        break;
+      case "3":
+        newWidth = 50;
+        break;
+      default:
+        console.log("bug in sizeSwitcher");
     }
 
-    var newWidth = (sizeSwitcher(size) * windowWidth) + 'px';
-
     for (var i = 0; i < pizzas.length; i++) {
-      pizzas[i].style.width = newWidth;
+      pizzas[i].style.width = newWidth + '%';
     }
   }
 

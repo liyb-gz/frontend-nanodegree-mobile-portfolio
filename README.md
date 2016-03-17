@@ -1,4 +1,15 @@
-## Website Performance Optimization portfolio project
+# Website Performance Optimization portfolio project
+
+## Getting Started
+1. Download the ZIP file from github (come on, you can find the "Download ZIP" button!)
+2. Unzip the compress file
+3. Open the unzipped folder
+4. Double click on the `index.html` file
+5. Enjoy staring at our dear Mr. Cameron Pittman!
+6. Click on the link `Cam's Pizzeria`
+7. Enjoy staring at the pizzas! They are everywhere!!!
+
+## Optimizations Summary
 
 ### Part 1: Optimize PageSpeed Insights score for index.html
 
@@ -20,6 +31,8 @@ The below optiomizations have been done to the pizza.html:
 - in `main.js`
 	- caching `document.body.scrollTop` so that it is requested only once
 	- refactoring the way the new width of the pizzas is calculated.
+	- replacing `document.querySelector` with the more efficient `document.getElementbyID`
+	- replacing `document.querySelectorAll` with the mroe efficient `document.getElementsbyClassName`
 - in `style.css`
 	- adding `will-change: transform` and `transform: translateZ(0)` to `.mover` so that the moving pizzas in the background are on their own layers 
 
