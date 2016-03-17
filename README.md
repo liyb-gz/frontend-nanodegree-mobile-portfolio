@@ -31,6 +31,9 @@ The below optiomizations have been done to the pizza.html:
 - in `main.js`
 	- caching `document.body.scrollTop` so that it is requested only once
 	- refactoring the way the new width of the pizzas is calculated.
+	- refactoring the function for updating random pizzas so the widths are now in percentage.
+	- refactoring the generation of moving pizzas on page load, so only visible pizzas are created.
+	- refactoring the update function for moving pizzas' positions, so it won't query the DOM in the `for` loops
 	- replacing `document.querySelector` with the more efficient `document.getElementbyID`
 	- replacing `document.querySelectorAll` with the mroe efficient `document.getElementsbyClassName`
 - in `style.css`
